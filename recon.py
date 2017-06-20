@@ -58,7 +58,7 @@ def main():
     parser.add_argument("--stealth",    dest="stealth", action="store_true", help="Only run non-intrusive scans to avoid tripping IDS", default=False)
     parser.add_argument("--use-msf",    dest="use-msf", action="store_true", help="Check common Metasploit exploits.", default=False)
     parser.add_argument("--pdf-report", dest="pdf-report", action="store_true", help="Generate host report in PDF format", default=False)
-    parset.add_argument("--md-report",  dest="md-report", action="store_true", help="Generate host report in MD format for GIT.", default=False)
+    parser.add_argument("--md-report",  dest="md-report", action="store_true", help="Generate host report in MD format for GIT.", default=False)
     parser.add_argument("--brute-force",dest="brute-force", action="store_true", help="Attempt a brute force login attack on services using the Kali fasttrack.txt.  Caution!  This will drastily increase script run time.")
     arguments = parser.parse_args()
 
