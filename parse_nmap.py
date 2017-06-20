@@ -25,10 +25,10 @@ def parse_nmap(results_file):
 
     for host in root.iter('host'):
         ip_address = host[1].get('addr')
-        for osmatch in host.iter('osmatch'):
-            host_os = osmatch.get('name')
-
-    print ip_address, host_os
+    #     for osmatch in host.iter('osmatch'):
+    #         host_os = osmatch.get('name')
+    #
+    # print ip_address, host_os
 
     for port in root.iter('port'):
         ports=[]

@@ -8,6 +8,7 @@ from file_helper import check_directory
 from file_helper import load_targets
 from file_helper import create_dir_structure
 from file_helper import write_recommendations
+from parse_nmap import parse_nmap
 
 
 def nmap_scan(ip_address, output_directory, dns_server, quick):
@@ -38,7 +39,7 @@ def nmap_scan(ip_address, output_directory, dns_server, quick):
    udpresults = subprocess.check_output(UDPSCAN, shell=True)
    tcpresults = subprocess.check_output(TCPSCAN, shell=True)
 
-   write_recommendations(tcpresults + udpresults, ip_address, output_directory)
+   # write_recommendations(tcpresults + udpresults, ip_address, output_directory)
    print("[*] TCP/UDP scans completed for %s" % ip_address)
 
 def valid_ip(address):
