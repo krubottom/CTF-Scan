@@ -46,6 +46,13 @@ def create_dir_structure(ip_address, output_directory):
     except:
         os.mkdir(lootdir)
 
+    reportdir = hostdir + "/report"
+    print("   [>] Creating report directory at: %s" % reportdir)
+    try:
+        os.stat(reportdir)
+    except:
+        os.mkdir(reportdir)
+
     prooffile = hostdir + "/proof.txt"
     print("   [>] Creating proof file at: %s" % prooffile)
     open(prooffile, 'a').close()

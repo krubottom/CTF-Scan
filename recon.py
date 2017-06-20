@@ -90,9 +90,9 @@ def main():
             service_scan(arguments.target_hosts, arguments.output_directory, arguments.find_dns_servers, arguments.quiet, arguments.quick)
         else:
             service_scan(arguments.target_hosts, arguments.output_directory, '', arguments.quiet, arguments.quick)
-    if arguments.perform_snmp_walk is True:
-        print("[#] Performing SNMP walks")
-        snmp_walk(arguments.target_hosts, arguments.output_directory, arguments.quiet)
+    # if arguments.perform_snmp_walk is True:
+    #     print("[#] Performing SNMP walks")
+    #     snmp_walk(arguments.target_hosts, arguments.output_directory, arguments.quiet)
 
 if __name__ == "__main__":
     main()
