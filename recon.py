@@ -28,8 +28,6 @@ nmap -A -sV -Pn -T5 --script=ms-sql* -p 1433 $TARGET
 nmap -A -sV -Pn --script=mysql* -p 3306 $TARGET
 mysql -u root -h $TARGET -e 'SHOW DATABASES; SELECT Host,User,Password FROM mysql.user;'
 
-nmap -A -sV -Pn -T5 --script=rdp-* -p 3389 $TARGET
-
 nmap -A -sV  -T5 --script=vnc* -p 5900 $TARGET
 
 nmap -A -sV -Pn -T5 --script=irc* -p 6667 $TARGET

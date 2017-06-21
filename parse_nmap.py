@@ -64,6 +64,7 @@ def parse_nmap(results_file):
                 print("   [>] Found telnet service on %s:%s" % (ip_address, port))
         elif "microsoft-ds" in serv:
             for port in ports:
+                # enum4linux
                 print("   [>] Found MS SMB service on %s:%s" % (ip_address, port))
         elif "ms-sql" in serv:
             for port in ports:
@@ -71,6 +72,7 @@ def parse_nmap(results_file):
         elif ("msdrdp" in serv) or ("ms-wbt-server" in serv):
             for port in ports:
                 print("   [>] Found RDP service on %s:%s" % (ip_address, port))
+                # nmap -A -sV -Pn -T5 --script=rdp-* -p 3389 $TARGET
         elif "smtp" in serv:
             for port in ports:
                 print("   [>] Found SMTP service on %s:%s" % (ip_address, port))
