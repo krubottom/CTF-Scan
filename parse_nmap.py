@@ -2,12 +2,16 @@
 
 Parse nmap scans
 
+
+check namp scan for robots.txt
+
 '''
 
 import os
 from argparse import ArgumentParser
 import xml.etree.ElementTree as ET
 # import parse_nmap
+#import www_scan
 
 def main():
     parser = ArgumentParser()
@@ -56,6 +60,8 @@ def parse_nmap(results_file):
         elif (serv == "http") or (serv == "ssl/http") or ("https" in serv) or ("http" in serv):
             for port in ports:
                 print("   [>] Found HTTP service on %s:%s" % (ip_address, port))
+                # nikto_scan(ip_address, output_directory, port)
+                print("nikto scan of %s on port %s to directory %s" % (ip_address, port, "test"))
         elif "mysql" in serv:
             for port in ports:
                 print("   [>] Found mysql service on %s:%s" % (ip_address, port))
