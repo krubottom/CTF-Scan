@@ -60,7 +60,7 @@ def parse_nmap(results_file):
         elif (serv == "http") or (serv == "ssl/http") or ("https" in serv) or ("http" in serv):
             for port in ports:
                 print("   [>] Found HTTP service on %s:%s" % (ip_address, port))
-                nikto_scan(ip_address, port)
+                nikto_scan(ip_address, port, "test")
                 # print("nikto scan of %s on port %s to directory %s" % (ip_address, port, "test"))
         elif "mysql" in serv:
             for port in ports:
