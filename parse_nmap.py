@@ -11,7 +11,7 @@ import os
 from argparse import ArgumentParser
 import xml.etree.ElementTree as ET
 # import parse_nmap
-#import www_scan
+import www_scan
 
 def main():
     parser = ArgumentParser()

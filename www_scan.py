@@ -20,11 +20,12 @@ whatweb
 
 '''
 
-def nikto_scan(ip_address, output_directory, port):
+def nikto_scan(ip_address, port, output_directory):
     ip_address = ip_address.strip()
 
     print("[+] Starting nikto scan for %s" % (ip_address))
-    NIKTOSCAN = "nikto -host %s -port %s -Tuning x 6 -evasion 2 -nointeractive -Format txt -o %s/%s_nikto.txt" % (ip_address, port, outputdir, ip_address)
+    #NIKTOSCAN = "nikto -host %s -port %s -Tuning x 6 -evasion 2 -nointeractive -Format txt -o %s/%s_nikto.txt" % (ip_address, port, outputdir, ip_address)
+    NIKTOSCAN = "nikto -host %s -port %s -Tuning x 6 -evasion 2 " % (ip_address, port)
     niktoresults = subprocess.check_output(NIKTOSCAN, shell=True)
     print("[+] Nikto scan completed for %s" % (ip_address))
 
