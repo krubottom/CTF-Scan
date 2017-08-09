@@ -5,6 +5,8 @@ Parse nmap scans
 
 check namp scan for robots.txt
 
+ndiff scanl.xml scan2.xml, two stage scan to check for IDS
+
 '''
 
 import os
